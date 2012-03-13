@@ -2,6 +2,12 @@
    "contact":
    {
       "fname": "John",
-      "lname": "Doe"
+      "lname": "Doe",
+      "email": "john@example.com",
+      "phone": "123-456-7890",
+      "street": "81321 Odd Numbered Drive Apt 3455",
+      "city": "New York",
+      "state": "NY",
+      "zip": "11235"
    }
 }
