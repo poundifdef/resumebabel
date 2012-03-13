@@ -1,4 +1,7 @@
 {
-   "fname": "John",
-   "lname": "Doe"
+   "contact":
+   {
+      "fname": "John",
+      "lname": "Doe"
+   }
 }
