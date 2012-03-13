@@ -1,0 +1,3 @@
+Dependencies:
+
+   * HTML, TXT templating: genshi (http://genshi.edgewall.org/)
