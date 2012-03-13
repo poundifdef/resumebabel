@@ -1,17 +1,16 @@
 import sys
 import json
-from genshi.template import MarkupTemplate
+from genshi.template import MarkupTemplate, TemplateLoader
 
 class ResumeHTML(object):
    def __init__(self, resume):
       self.resume = resume
 
    def create_output(self):
-      templ = MarkupTemplate('<h1>Hello, $fname</h1>')
+      loader = TemplateLoader('.')
+      templ = loader.load('ResumeHTMLTemplate.html') 
       stream = templ.generate(**resume)
-      print stream
       print stream.render('xhtml')
-      print 'hello world'
 
 if __name__ == '__main__':
    fd = open('resume.json')
