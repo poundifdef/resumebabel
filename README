@@ -1,3 +1,29 @@
+One of the most tedious parts of applying to jobs is the resume. Everyone 
+accepts a different resume format - HTML, PDF, plain text, MS Word - and it's
+a mess.
+
+LinkedIn (and other career websites where you can post a resume) don't 
+really help; HR still wants you to paste a plain-text resume into their little
+online job application.
+
+This project is a series of scripts to convert a resume to any number of
+output formats. JSON is the input, and each module will output to a different
+format.
+
+If there is a format you want to see, feel free to write a template and make
+a pull request!
+
+Supported formats:
+
+   * HTML with hResume (in progress)
+
+Upcoming formats:
+
+   * Plain text
+   * PDF
+   * RTF
+   * LaTeX
+
 Dependencies:
 
    * HTML, TXT templating: genshi (http://genshi.edgewall.org/)
