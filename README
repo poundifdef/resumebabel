@@ -1,5 +1,5 @@
 This project is a series of scripts to convert a resume to any number of
-output formats. JSON is the input, and each module will output to a different
+output formats. JSON is the input, and each module outputs to a different
 format.
 
 One of the most tedious parts of applying to jobs is the resume. Everyone's
@@ -13,10 +13,11 @@ a pull request!
 
 Supported formats:
 
-   * HTML with hResume (in progress)
+   * forthcoming!
 
 Upcoming formats:
 
+   * HTML with hResume (in progress)
    * Plain text
    * PDF
    * RTF
