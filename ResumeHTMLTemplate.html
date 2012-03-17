@@ -1,23 +1,23 @@
 <html>
    <head>
       <title>
-         ${contact.fname} ${contact.lname} - Resume
+         ${hresume.contact.fname} ${hresume.contact.lname} - Resume
       </title>
    </head>
    <body>
       <div class="vcard">
          <h1 class="fn n">
-            <span class="given-name">${contact.fname}</span> 
-            <span class="family-name">${contact.lname}</span>
+            <span class="given-name">${hresume.contact.fname}</span> 
+            <span class="family-name">${hresume.contact.lname}</span>
          </h1>
 
-         <span class="email">${contact.email}</span> <br />
-         <span class="tel">${contact.phone}</span> <br /><br />
+         <span class="email">${hresume.contact.email}</span> <br />
+         <span class="tel">${hresume.contact.phone}</span> <br /><br />
 
-         <span class="street-address">${contact.street}</span> <br />
-         <span class="locality">${contact.city}</span>,
-         <span class="region">${contact.state}</span>
-         <span class="postal-code">${contact.zip}</span> <br />
+         <span class="street-address">${hresume.contact.street}</span> <br />
+         <span class="locality">${hresume.contact.city}</span>,
+         <span class="region">${hresume.contact.state}</span>
+         <span class="postal-code">${hresume.contact.zip}</span> <br />
       </div>
 
    </body>
