@@ -14,10 +14,25 @@
          <span class="email">${hresume.contact.email}</span> <br />
          <span class="tel">${hresume.contact.phone}</span> <br /><br />
 
-         <span class="street-address">${hresume.contact.street}</span> <br />
-         <span class="locality">${hresume.contact.city}</span>,
-         <span class="region">${hresume.contact.state}</span>
-         <span class="postal-code">${hresume.contact.zip}</span> <br />
+         <span class="adr">
+            <span class="street-address">${hresume.contact.street}</span> <br />
+            <span class="locality">${hresume.contact.city}</span>,
+            <span class="region">${hresume.contact.state}</span>
+            <span class="postal-code">${hresume.contact.zip}</span> <br />
+         </span>
+      </div>
+
+      <div class="vcalendar">
+        <div class="education vevent">
+          <div class="summary vcard">
+            <span class="location fn org">Preston High School</span>
+            <div class="adr">
+              <span class="locality">SomeCity</span>, 
+              <abbr class="region" title="Alaska">AK</abbr>
+            </div>
+          </div>
+          (<abbr class="dtstart" title="2001-01-24">2001</abbr> - <abbr class="dtend" title="2005-05-25">2005</abbr>)
+        </div>
       </div>
 
    </body>
