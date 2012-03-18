@@ -9,5 +9,22 @@
       "city": "New York",
       "state": "NY",
       "zip": "11235"
-   }
+   },
+   "education":
+   [
+      {
+         "name": "Eagle High School",
+         "city": "Seattle",
+         "state": "WA",
+         "from-date": "2002",
+         "to-date": "2004"
+      },
+      {
+         "name": "Unicorn High School",
+         "city": "Redmond",
+         "state": "WA",
+         "from-date": "2004",
+         "to-date": "2006"
+      }
+   ]
 }
