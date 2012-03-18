@@ -16,15 +16,15 @@
          "name": "Eagle High School",
          "city": "Seattle",
          "state": "WA",
-         "from-date": "2002",
-         "to-date": "2004"
+         "start_date": "2002",
+         "end_date": "2004"
       },
       {
          "name": "Unicorn High School",
          "city": "Redmond",
          "state": "WA",
-         "from-date": "2004",
-         "to-date": "2006"
+         "start_date": "2004",
+         "end_date": "2006"
       }
    ]
 }

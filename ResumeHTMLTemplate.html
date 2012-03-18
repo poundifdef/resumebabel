@@ -1,4 +1,4 @@
-<html>
+<html xmlns:py="http://genshi.edgewall.org/">
    <head>
       <title>
          ${hresume.contact.fname} ${hresume.contact.lname} - Resume
@@ -22,16 +22,16 @@
          </span>
       </div>
 
-      <div class="vcalendar">
+      <div class="vcalendar" py:for="school in hresume.education">
         <div class="education vevent">
           <div class="summary vcard">
-            <span class="location fn org">Preston High School</span>
+            <span class="location fn org">${school.name}</span>
             <div class="adr">
-              <span class="locality">SomeCity</span>, 
-              <abbr class="region" title="Alaska">AK</abbr>
+              <span class="locality">${school.city}</span>, 
+              <abbr class="region" title="Alaska">${school.state}</abbr>
             </div>
           </div>
-          (<abbr class="dtstart" title="2001-01-24">2001</abbr> - <abbr class="dtend" title="2005-05-25">2005</abbr>)
+          (<abbr class="dtstart" title="${school.start_date}">${school.start_date}</abbr> - <abbr class="dtend" title="${school.end_date}">${school.end_date}</abbr>)
         </div>
       </div>
 
