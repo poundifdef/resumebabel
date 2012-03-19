@@ -22,7 +22,7 @@
          </span>
       </div>
 
-      <div class="vcalendar" py:for="school in hresume.education">
+      <div class="vcalendar" py:for="key, school in enumerate(hresume.education)">
         <div class="education vevent">
           <div class="summary vcard">
             <span class="location fn org">${school.name}</span>
@@ -31,7 +31,8 @@
               <abbr class="region" title="Alaska">${school.state}</abbr>
             </div>
           </div>
-          (<abbr class="dtstart" title="${school.start_date}">${school.start_date}</abbr> - <abbr class="dtend" title="${school.end_date}">${school.end_date}</abbr>)
+          (<abbr class="dtstart" title="${school.start_date}">${education[key].start_date}</abbr> - 
+           <abbr class="dtend" title="${school.end_date}">${education[key].end_date}</abbr>)
         </div>
       </div>
 
