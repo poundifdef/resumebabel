@@ -17,14 +17,16 @@
          "city": "Seattle",
          "state": "WA",
          "start_date": "2002",
-         "end_date": "2004"
+         "end_date": "2004",
+         "degree": "not completed"
       },
       {
          "name": "Unicorn High School",
          "city": "Redmond",
          "state": "WA",
          "start_date": "2004",
-         "end_date": "2006"
+         "end_date": "2006",
+         "degree": "GED"
       }
    ]
 }
