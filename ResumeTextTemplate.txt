@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 {# define variables here #}\
 {% with 
     line = line_char * max_columns %}\
 {# start template here #}\
-=======
->>>>>>> f91433fdac69a165113ef80d9ce10cbe7ef9fc68
 ${tresume.contact.fname} ${tresume.contact.lname}
 
 ${tresume.contact.street}
@@ -12,7 +9,6 @@ ${tresume.contact.city}, ${tresume.contact.state} ${tresume.contact.zip}
 ${tresume.contact.email}
 ${tresume.contact.phone}
 
-<<<<<<< HEAD
 ${line}
 
 WORK EXPERIENCE
@@ -32,12 +28,4 @@ ${school.city}, ${school.state}
 ${education[key].degree}
 {% end %}
 
-=======
-EDUCATION
-
-{% for key, school in enumerate(tresume.education) %}
-${school.name} ${education[key].start_date} - ${education[key].end_date}
-${education[key].degree}
-${school.city}, ${school.state}
->>>>>>> f91433fdac69a165113ef80d9ce10cbe7ef9fc68
 {% end %}
