@@ -28,5 +28,26 @@
          "end_date": "2006",
          "degree": "GED"
       }
+   ],
+   "jobs":
+   [
+	  {
+         "name": "Boring Books",
+         "city": "Seattle",
+         "state": "WA",
+         "start_date": "2002-01",
+         "end_date": "2004-01",
+         "title": "Page Turner",
+		 "description": "Turned over 10000+ pages for customers and myself."
+      },
+      {
+         "name": "Tepid Tea",
+         "city": "Redmond",
+         "state": "WA",
+         "start_date": "2004-07",
+         "end_date": "2006-07",
+         "title": "Tea Timer",
+		 "description": "Ensured tea wasn't consumed until it cooled."
+      }
    ]
 }
