@@ -1,0 +1,14 @@
+${tresume.contact.fname} ${tresume.contact.lname}
+
+${tresume.contact.street}
+${tresume.contact.city}, ${tresume.contact.state} ${tresume.contact.zip}
+${tresume.contact.email}
+${tresume.contact.phone}
+
+EDUCATION
+
+{% for key, school in enumerate(tresume.education) %}
+${school.name} ${education[key].start_date} - ${education[key].end_date}
+${education[key].degree}
+${school.city}, ${school.state}
+{% end %}
