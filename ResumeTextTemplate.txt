@@ -11,21 +11,22 @@ ${tresume.contact.phone}
 
 ${line}
 
-WORK EXPERIENCE
+OBJECTIVE
 
+${tresume.objective}
+
+WORK EXPERIENCE
 {% for key, job in enumerate(tresume.jobs) %}
 ${job.start_date} - ${job.end_date}
 ${job.title} @ ${job.name} ${job.city}, ${job.state}
- * ${job.description}
-{% end %}
+ * ${job.description} 
+{% end %}\
 
 EDUCATION
-
 {% for key, school in enumerate(tresume.education) %}
 ${education[key].start_date} - ${education[key].end_date}
 ${school.name}
 ${school.city}, ${school.state}
 ${education[key].degree}
-{% end %}
-
+{% end %}\
 {% end %}

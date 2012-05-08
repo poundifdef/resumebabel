@@ -10,6 +10,7 @@
       "state": "NY",
       "zip": "11235"
    },
+   "objective":"A position in the field of computers with special interests in business applications programming, information processing, and management systems.",
    "education":
    [
       {
@@ -47,7 +48,7 @@
          "start_date": "2004-07",
          "end_date": "2006-07",
          "title": "Tea Timer",
-		 "description": "Ensured tea wasn't consumed until it cooled."
+		 "description": "Ensured tea wasn't consumed until cooled."
       }
    ]
 }
