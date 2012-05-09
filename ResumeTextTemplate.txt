@@ -1,6 +1,6 @@
 {# define variables here #}\
 {% with 
-    line = line_char * max_columns %}\
+    line = line_char * column_width %}\
 {# start template here #}\
 ${tresume.contact.fname} ${tresume.contact.lname}
 
@@ -19,7 +19,8 @@ WORK EXPERIENCE
 {% for key, job in enumerate(tresume.jobs) %}
 ${job.start_date} - ${job.end_date}
 ${job.title} @ ${job.name} ${job.city}, ${job.state}
- * ${job.description} 
+
+ ${bullet} ${job.description} 
 {% end %}\
 
 EDUCATION
