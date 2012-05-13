@@ -28,4 +28,4 @@ if __name__ == '__main__':
     resume = json.load(fd)
 
     r = resume_converter_class(resume)
-    r.create_output("out.txt")
+    r.create_output(output_file)
