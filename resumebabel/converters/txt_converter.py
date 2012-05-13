@@ -2,7 +2,7 @@ import re
 from genshi.template import NewTextTemplate, TemplateLoader
 from textwrap import TextWrapper
 
-class ResumeText(object):
+class TXTConverter(object):
    def wrap(self, text, column_width=80, bullet='*'):
       docWrapper = TextWrapper(width=column_width, replace_whitespace=False)
       listWrapper = TextWrapper(width=column_width, subsequent_indent='   ', replace_whitespace=False)
