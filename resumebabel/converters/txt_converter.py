@@ -1,8 +1,9 @@
-import re
 from genshi.template import NewTextTemplate, TemplateLoader
+import re
 from textwrap import TextWrapper
+
 from converter_parent import ConverterParent
-#from resumebabel import ConverterParent
+
 
 class TXTConverter(ConverterParent):
    def wrap(self, text, column_width=80, bullet='*'):
@@ -31,9 +32,6 @@ class TXTConverter(ConverterParent):
 
       return '\n'.join(docSplit)
 
-   #def __init__(self, resume):
-   #   self.resume = resume
-
    def preprocess_resume(self):
       self.resume['tresume'] = self.resume
       
@@ -44,28 +42,13 @@ class TXTConverter(ConverterParent):
       return self.resume
 
    def do_conversion(self, outputFile = ""):
-      #self.preprocess_resume()
-      
-      #from pkg_resources import resource_string, resource_listdir, resource_filename
-
       template_filename = self.get_resource('txt_template.txt') 
-      
-
 
       loader = TemplateLoader('.')
       templ = loader.load(template_filename, cls=NewTextTemplate)
       stream = templ.generate(**self.resume)
 
       self.generated_resume = stream.render('text')
-      
-      #self.postprocess_resume()
-     
-      #if outputFile != "":
-      #  with open(outputFile, "w") as file:
-      #      file.write(self.generatedResume)
-      #  print("Wrote to " + outputFile + " successfully")
-      
-      #print self.generatedResume
       
    def postprocess_resume(self):
       self.generated_resume = self.wrap(self.generated_resume,self.resume['column_width'],self.resume['bullet'])
