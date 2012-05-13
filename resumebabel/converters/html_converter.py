@@ -1,6 +1,3 @@
-import sys
-import json
-from pprint import pprint
 from copy import deepcopy
 from genshi.template import MarkupTemplate, TemplateLoader
 
