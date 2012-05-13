@@ -1,1 +1,1 @@
-PYTHONPATH=/home/jay/github/resumebabel python convert.py resume.json
+PYTHONPATH=/home/jay/github/resumebabel python convert.py resume.json out.txt
