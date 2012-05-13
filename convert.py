@@ -3,6 +3,7 @@ import os
 import sys
 
 
+# http://stackoverflow.com/a/452981/3788
 def get_class(kls):
     parts = kls.split('.')
     module = ".".join(parts[:-1])
