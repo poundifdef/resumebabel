@@ -1,8 +1,10 @@
 import re
 from genshi.template import NewTextTemplate, TemplateLoader
 from textwrap import TextWrapper
+from converter_parent import ConverterParent
+#from resumebabel import ConverterParent
 
-class TXTConverter(object):
+class TXTConverter(ConverterParent):
    def wrap(self, text, column_width=80, bullet='*'):
       docWrapper = TextWrapper(width=column_width, replace_whitespace=False)
       listWrapper = TextWrapper(width=column_width, subsequent_indent='   ', replace_whitespace=False)
@@ -29,8 +31,8 @@ class TXTConverter(object):
 
       return '\n'.join(docSplit)
 
-   def __init__(self, resume):
-      self.resume = resume
+   #def __init__(self, resume):
+   #   self.resume = resume
 
    def preprocess_resume(self):
       self.resume['tresume'] = self.resume
@@ -41,33 +43,29 @@ class TXTConverter(object):
       self.resume['bullet'] = '~'
       return self.resume
 
-   def create_output(self, outputFile = ""):
-      self.preprocess_resume()
+   def do_conversion(self, outputFile = ""):
+      #self.preprocess_resume()
       
-      from pkg_resources import resource_string, resource_listdir, resource_filename
+      #from pkg_resources import resource_string, resource_listdir, resource_filename
 
-      #print resource_listdir('resumebabel.resources', '')
-      template_filename = resource_filename('resumebabel.resources', 'txt_template.txt')
+      template_filename = self.get_resource('txt_template.txt') 
       
 
 
       loader = TemplateLoader('.')
       templ = loader.load(template_filename, cls=NewTextTemplate)
-      #templ = loader.load('/home/jay/github/resumebabel/resources/txt_template.txt', cls=NewTextTemplate)
-      
-      #templ = NewTextTemplate('''{% include ../resources/txt_template.txt %}''')
-      #templ = NewTextTemplate('''{% include /home/jay/github/resumebabel/resources/txt_template.txt %}''')
       stream = templ.generate(**self.resume)
-      self.generatedResume = stream.render('text')
+
+      self.generated_resume = stream.render('text')
       
-      self.postprocess_resume()
+      #self.postprocess_resume()
      
-      if outputFile != "":
-        with open(outputFile, "w") as file:
-            file.write(self.generatedResume)
-        print("Wrote to " + outputFile + " successfully")
+      #if outputFile != "":
+      #  with open(outputFile, "w") as file:
+      #      file.write(self.generatedResume)
+      #  print("Wrote to " + outputFile + " successfully")
       
       #print self.generatedResume
       
    def postprocess_resume(self):
-      self.generatedResume = self.wrap(self.generatedResume,self.resume['column_width'],self.resume['bullet'])
+      self.generated_resume = self.wrap(self.generated_resume,self.resume['column_width'],self.resume['bullet'])
