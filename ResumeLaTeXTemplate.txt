@@ -1,0 +1,36 @@
+% LaTeX resume using res.cls
+\documentclass[line,margin]{res} 
+
+\begin{document}
+
+\name{${ltxresume.contact.fname} ${ltxresume.contact.lname}}
+% \address used twice to have two lines of address
+\address{${ltxresume.contact.city}, ${ltxresume.contact.state} ${ltxresume.contact.zip}}
+\address{${ltxresume.contact.phone}}
+
+ 
+\begin{resume}
+ 
+\section{OBJECTIVE} ${ltxresume.objective}
+ 
+ 
+\section{EDUCATION} 
+                {% for key, school in enumerate(ltxresume.education) %}
+                {\sl Bachelor of Science,} ${education[key].degree} \\
+                ${school.name}, ${school.city}, ${school.state}, 
+                ${education[key].start_date} - ${education[key].end_date} \\
+                {% end %}
+ 
+\section{EXPERIENCE} 
+
+{% for key, job in enumerate(ltxresume.jobs) %}
+{\sl ${job.title}} \hfill ${job.start_date} - ${job.end_date} \\
+                ${job.name}, 
+                ${job.city}, ${job.state}
+                 \begin{itemize}  \itemsep -2pt % reduce space between items
+                 \item ${job.description}
+                \end{itemize}
+{% end %} 
+
+\end{resume}
+\end{document}
