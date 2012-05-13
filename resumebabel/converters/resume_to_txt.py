@@ -48,7 +48,19 @@ class ResumeText(object):
    def create_output(self, outputFile = ""):
       self.preprocess_resume()
       
-      templ = NewTextTemplate('''{% include ResumeTextTemplate.txt %}''')
+      from pkg_resources import resource_string, resource_listdir, resource_filename
+
+      #print resource_listdir('resumebabel.resources', '')
+      template_filename = resource_filename('resumebabel.resources', 'txt_template.txt')
+      
+
+
+      loader = TemplateLoader('.')
+      templ = loader.load(template_filename, cls=NewTextTemplate)
+      #templ = loader.load('/home/jay/github/resumebabel/resources/txt_template.txt', cls=NewTextTemplate)
+      
+      #templ = NewTextTemplate('''{% include ../resources/txt_template.txt %}''')
+      #templ = NewTextTemplate('''{% include /home/jay/github/resumebabel/resources/txt_template.txt %}''')
       stream = templ.generate(**self.resume)
       self.generatedResume = stream.render('text')
       
@@ -59,13 +71,13 @@ class ResumeText(object):
             file.write(self.generatedResume)
         print("Wrote to " + outputFile + " successfully")
       
-      print self.generatedResume
+      #print self.generatedResume
       
    def postprocess_resume(self):
       self.generatedResume = wrap(self.generatedResume,resume['column_width'],resume['bullet'])  
    
 if __name__ == '__main__':
-   fd = open('resume.json')
+   fd = open(sys.argv[1])
    resume = json.load(fd)
 
    r = ResumeText(resume)

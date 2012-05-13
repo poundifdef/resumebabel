@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta name="Author" content="Muskie McKay" /> <!-- You probably want to change this -->
+	<meta name="Description" content= "This should be a short block of text similar to your profile,
+	you might want to use slightly different keywords, search engines still use this." />
+	<meta name="keywords" content="list, keywords, you, particularly, want, your, resume, to, be, found,
+	in, search, engines, for, and, wish, for, luck, ;-) " />
+    <title>Resume of Whoever</title>
+    <!-- After seeing Tantek Celik speak at Web Directions North I decided I would redo the HTML version of
+    my resume using the hResume microformat.  After reading the basics at http://microformats.org/wiki/hresume 
+    I took a look at real world examples.  There were some excellent implementations, but in the end I
+    opted to base my own resume off of Clint Andrew Hall as his resume was laid out similarly to how
+    mine was, his code was clean, and he didn't use an external style sheet, which is the way to go with a
+    resume me thinks.  Thanks to Clint his resume can be found at http://www.clintandrewhall.com/resume.html --> 
+    
+    <!--
+    main text color (Black) #000
+    main background color (White) #FFF
+    pale background #E8EBF0
+    dark grey #666
+    medium grey #999
+    light grey #CCC
+    striking orage #FF8C00
+    a:link #00BFFF
+    a:visited #9370DB
+    a:hover background #E8EBF0
+    -->
+    
+    <!-- be sure and change title attributes on all dates -->
+    
+    <style type="text/css">
+        html {padding: 1em;}
+        body {font-size: .8em; font-family: STKaiti, verdana, sans-serif;}
+        h1,h2,h3,h4 {margin: 0; padding: 0;}
+        h1 {font-size: 1.1em; text-align: center;}
+        h2 {font-size: 1.8em; font-weight: bold; font-variant: small-caps; text-align: left;}
+        h3 {font-size: 1.3em; font-weight: 500;}
+        h4 {font-size: 1.1em; font-weight: 500;}
+        .hresume .htitle .include {display: none; height: 0; width: 0;}
+        .hresume table, .hresume tr, .hresume td { vertical-align: top; width: 100%; border: 0px; }
+        p { text-align: justify; }
+        @media print {
+            body { font-size: 8pt; }
+            h2 { border-bottom: 1px solid #CCC; background: #E6E6E6; margin: .75em 0 .5em 0; padding-left: .25em;}
+            p { margin: .25em; padding: 0; }
+        }
+        @media screen {
+            body { background: #FFF; }
+            h2 { color: #999; border-bottom: 3px solid #666; padding: .25em 0 0 .5em; margin: 0;}
+            
+            .contact {font-size:95%; background: #FFF; border: 1px solid #CCC; border-right : 2px inset #666; border-bottom : 2px inset #666;}
+            .contact .fn {background: #E8EBF0; padding: .1em; color: #666; font-weight: normal;}
+            .contact .adr {padding: .2em .75em; clear:both; float: left; width: 50%;}
+            .contact .med {float: right; padding: .2em; font-size: 90%;}
+            .contact .tel, .contact .street-address {color: #999;}
+            
+            .hresume .education .htitle, .hresume .experience .htitle { float:left; }
+            .hresume .education .org, .hresume .experience .org, .hresume .experience .location {color: #666;}
+            .hresume .date_duration {float: right; margin-top: .75em;}
+            .hresume .date_duration abbr {border: none; color: #666;}
+            .hresume .section {margin-top: 0.5em;}
+            .hresume .experience ol {list-style: none; border-left: 2px solid #CCC; padding-left: 1.5em; margin-left: 1em;}
+            .hresume .experience ol li{margin-bottom: .7em;}
+            .hresume .experience ol li ul li{margin-bottom: .1em;}
+            .hresume .experience .achievments { }
+            .hresume .experience h4 { color: #999; }
+            
+            .vcalendar {background:#FFF; border: none;}
+            .vcalendar .experience, .vcalendar .education {clear: left; margin-bottom: 2em;}
+            .header {padding: .2em 1em; background: #E8EBF0; border-bottom: 1px dashed #666;}
+            .description {padding:0 .5em; margin:0 .5em;}
+            .clear {clear: both; line-height: 0;}
+            
+            .hresume .other { background:#FFF; border: none; margin-top: 1em; }
+            .hresume .other .description ul li { margin-bottom: .2em;}
+            
+            .hresume .skills { }
+            .hresume .skills th {text-align:left; width:300px; font-weight: bold; color: #666;}
+            .hresume .skills td {text-align:left; }
+            .hresume .skills .skillarea { }
+            .hresume .skills .skill { }
+            .hresume .skills ul {display : inline; list-style-type : none;}
+            .hresume .skills li {display : inline; list-style-type : none;}
+            
+            .hresume .envolvement { }
+            .hresume .envolvement th {text-align:right; white-space: nowrap; font-weight: normal; }
+            .hresume .envolvement td {text-align:left; }
+            .hresume .envolvement .experience { }
+            .hresume .envolvement .experience .summary { }
+            .hresume a { text-decoration: none; }
+            
+			.hresume a:link { color: #00BFFF; }
+			.hresume a:visited { color: #9370DB; }
+			.hresume a:hover { background: #E8EBF0; }
+			.hresume a:active { color: red; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hresume">
+        <div class="contact vcard">
+            <h1 class="fn n" id="j">
+                <span class="name">
+                    <span class="given-name">Given Name</span> <span class="additional-name">Additional Name</span> <span class="family-name">Family Name</span>
+                </span>
+            </h1>
+            <div class="adr">
+                <span class="street-address">123 Start Street</span>
+                <br/>
+                <span class="locality">Town</span>, <span class="region">State</span> <span class="postal-code">Postal Code</span> <span class="country-name">Country</span>
+            </div>
+            <div class="med">
+                Phone: <span class="tel">Phone</span><br/>
+                Email: <a class="email" href="mailto:joe@blah.com">joe@blah.com</a><br/>
+                Web: <a class="url" href="http://www.muschamp.ca">http://www.muschamp.ca</a>
+            </div>
+            <div class="clear">&nbsp;</div>
+        </div>        
+        <div class="section other">
+        	<h2>Profile</h2>
+        	<div class="description">
+        		<p>
+        			Profile goes here. I need a lot of text to see what it looks like, I also want things to
+        			be justified nicely.  Hence the typing of random crap until I get a good block of text.
+        			I think three or four lines should be sufficient.  
+        		</p>
+        	</div>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <div class="vcalendar">
+                <div class="education vevent vcard">
+                    <div class="header">
+                        <div class="htitle">
+                            <h3 class="summary">Degree One</h3>
+                            <span class="org">School and Location</span>
+                        </div>
+                        <div class="date_duration"><abbr class="dtstart" title="1997-09-01">Start</abbr> - <abbr class="dtend" title="2001-08-01">End</abbr></div>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                    <div class="description">
+                        <p>Description can be optional?</p>
+                    </div>
+                </div>
+                <div class="education vevent vcard">
+                    <div class="header">
+                        <div class="htitle">
+                            <h3 class="summary">Degree Two</h3>
+                            <span class="org">School and Location</span>
+                        </div>
+                        <div class="date_duration"><abbr class="dtstart" title="1997-09-01">Start</abbr> - <abbr class="dtend" title="2001-08-01">End</abbr></div>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                    <div class="description">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Professional Experience</h2>
+            <div class="vcalendar">
+                <div class="experience vevent vcard">
+                    <div class="header">
+                        <div class="htitle">
+                            <object data="#j" class="include"></object>
+                            <h3 class="title">Position One</h3>
+                            <span class="org">Organization</span>, <span class="location">Location</span>
+                        </div>
+                        <div class="date_duration"><abbr class="dtstart" title="2005-01-01">Start</abbr> - <abbr class="dtend">End</abbr></div>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Description can be in paragraph or
+                        </p>
+                        <ul class="achievements">
+                            <li>point form</li>
+                            <li>or both</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience vevent vcard">
+                    <div class="header">
+                        <div class="htitle">
+                            <object data="#j" class="include"></object>
+                            <h3 class="title">Position Two</h3>
+                            <span class="org">Organization</span>, <span class="location">Location</span>
+                        </div>
+                        <div class="date_duration"><abbr class="dtstart" title="2005-01-01">Start</abbr> - <abbr class="dtend">End</abbr></div>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Description can be in paragraph or
+                        </p>
+                        <ul class="achievements">
+                            <li>point form</li>
+                            <li>or both</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience vevent vcard">
+                    <div class="header">
+                        <div class="htitle">
+                            <object data="#j" class="include" height="1" width="1"></object>
+                            <h3 class="title">Position Three</h3>
+                            <span class="org">Organization</span>, <span class="location">Location</span>
+                        </div>
+                        <div class="date_duration"><abbr class="dtstart" title="2001-07-01">Start</abbr> - <abbr class="dtend" title="2003-06-01">End</abbr></div>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Description
+                        </p>
+                        <ol>
+                            <li>
+                                <h4>Subtitle</h4>
+                                <p>
+                                    Also a description
+                                </p>
+                                <ul class="achievements">
+                                    <li>Something</li>
+                                    <li>Something Else</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Another Subtitle</h4>
+                                <p>
+                                    Another description
+                                </p>
+                                <ul class="achievements">
+                                    <li>point</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section other">
+            <h2>Computer Skills</h2>
+			<table class="skills">
+			  <tr>
+				<th class="skillarea">
+					Languages:
+				</th>
+				<td>
+					<ul>
+						<li class="skill">C</li>
+						<li class="skill">C++</li>
+						<li class="skill">Java</li>
+						<li class="skill">Objective-C</li>
+						<li class="skill">Modula-2</li>
+						<li class="skill">Perl</li>
+						<li class="skill">PHP</li>
+						<li class="skill">Scheme</li>
+						<li class="skill">TurboPascal</li>
+					</ul>
+				</td>
+			  </tr>
+			  <tr>
+				<th class="skillarea">
+					Databases:
+				</th>
+				<td>
+					<ul>
+						<li class="skill">Oracle</li>
+						<li class="skill">FrontBase</li>
+						<li class="skill">MySQL</li>
+						<li class="skill">FileMaker Pro</li>
+					</ul>
+				</td>
+			  </tr>
+			</table>
+        </div>
+        <div class="section other">
+            <h2>Activities and Community Envolvement</h2>
+            <div class="vcalendar">
+				<table class="envolvement">
+				  <tr class="experience vevent">
+					<td class="summary">
+						Co-founded the first <a href="http://www.netimpact.org/">Net Impact</a> chapter in mainland China
+					</td>
+					<th>
+						<span class="dtstart" title="">2005</span>
+					</th>
+				  </tr>
+				  <tr class="experience vevent">
+					<td class="summary">
+						VP Speakers <a href="http://www.mbasociety.ca/clubs/ent/">MBA Entrepreneurship 
+						Club</a>, responsible for securing guest speakers
+					</td>
+					<th>
+						<span class="dtstart" title="">2005</span>
+					</th>
+				  </tr>
+				</table>
+            </div>
+        </div>
+        <div class="section other">
+            <h2>Interests and Language Skills</h2>
+            <div class="description">
+				<ul>	
+					<li>Conversational Japanese with some Mandarin and French.</li>
+					<li>Recreational sports enthusiast, previously have captained teams and won 
+					numerous awards in competitive soccer, rugby, and football.</li>
+				</ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
