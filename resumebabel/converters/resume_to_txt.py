@@ -74,7 +74,7 @@ class ResumeText(object):
       #print self.generatedResume
       
    def postprocess_resume(self):
-      self.generatedResume = wrap(self.generatedResume,resume['column_width'],resume['bullet'])  
+      self.generatedResume = wrap(self.generatedResume,self.resume['column_width'],self.resume['bullet'])
    
 if __name__ == '__main__':
    fd = open(sys.argv[1])
