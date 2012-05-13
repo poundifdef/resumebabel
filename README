@@ -17,11 +17,13 @@ Supported formats:
 
 Upcoming formats:
 
+   * Plain text (in progress)
    * HTML with hResume (in progress)
-   * Plain text
+   * LaTeX (in progress)
    * PDF
    * RTF
-   * LaTeX
+   * DOC
+   * ...?
 
 Dependencies:
 
