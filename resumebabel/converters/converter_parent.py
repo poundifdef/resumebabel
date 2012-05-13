@@ -12,6 +12,9 @@ class ConverterParent(object):
     def preprocess_resume(self):
         pass
 
+    def do_conversion(self):
+        raise Exception('Not implemented')
+
     def postprocess_resume(self):
         pass
 
@@ -23,5 +26,3 @@ class ConverterParent(object):
         with open(outputFile, "w") as file:
             file.write(self.generated_resume)
 
-    def do_conversion(self):
-        raise Exception('Not implemented')

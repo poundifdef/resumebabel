@@ -1,0 +1,54 @@
+{
+   "contact":
+   {
+      "fname": "John",
+      "lname": "Doe",
+      "email": "john@example.com",
+      "phone": "123-456-7890",
+      "street": "81321 Odd Numbered Drive Apt 3455",
+      "city": "New York",
+      "state": "NY",
+      "zip": "11235"
+   },
+   "objective":"A position in the field of computers with special interests in business applications programming, information processing, and management systems.",
+   "education":
+   [
+      {
+         "name": "Eagle High School",
+         "city": "Seattle",
+         "state": "WA",
+         "start_date": "2002",
+         "end_date": "2004",
+         "degree": "not completed"
+      },
+      {
+         "name": "Unicorn High School",
+         "city": "Redmond",
+         "state": "WA",
+         "start_date": "2004",
+         "end_date": "2006",
+         "degree": "GED"
+      }
+   ],
+   "jobs":
+   [
+	  {
+         "name": "Boring Books",
+         "city": "Seattle",
+         "state": "WA",
+         "start_date": "2002-01",
+         "end_date": "2004-01",
+         "title": "Page Turner",
+		 "description": "Turned over 10000+ pages for customers and myself."
+      },
+      {
+         "name": "Tepid Tea",
+         "city": "Redmond",
+         "state": "WA",
+         "start_date": "2004-07",
+         "end_date": "2006-07",
+         "title": "Tea Timer",
+		 "description": "Ensured tea wasn't consumed until cooled."
+      }
+   ]
+}

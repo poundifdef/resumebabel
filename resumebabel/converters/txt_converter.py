@@ -33,15 +33,12 @@ class TXTConverter(ConverterParent):
       return '\n'.join(docSplit)
 
    def preprocess_resume(self):
-      self.resume['tresume'] = self.resume
-      
       # TODO: parameterize text formatting features
       self.resume['column_width'] = 40
       self.resume['line_char'] = '*'
       self.resume['bullet'] = '~'
-      return self.resume
 
-   def do_conversion(self, outputFile = ""):
+   def do_conversion(self):
       template_filename = self.get_resource('txt_template.txt') 
 
       loader = TemplateLoader('.')
