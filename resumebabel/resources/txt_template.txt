@@ -16,7 +16,7 @@ OBJECTIVE
 ${objective}
 
 WORK EXPERIENCE
-{% for key, job in enumerate(jobs) %}
+{% for key, job in enumerate(experience) %}
 ${job.start_date} - ${job.end_date}
 ${job.title} @ ${job.name} ${job.city}, ${job.state}
 
