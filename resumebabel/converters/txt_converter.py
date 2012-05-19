@@ -10,17 +10,13 @@ class TXTConverter(ConverterParent):
       docWrapper = TextWrapper(width=column_width, replace_whitespace=False)
       listWrapper = TextWrapper(width=column_width, subsequent_indent='   ', replace_whitespace=False)
 
-      # split document by newlines
       docSplit = text.splitlines()
 
-      # loop through all lines in the document
-      for line_number, line_value in enumerate(docSplit): #range(len(docSplit)):
-          # does this line start with a bullet point?
+      for line_number, line_value in enumerate(docSplit):
           if line_value.strip().startswith(bullet):
-              # use list wrapping if a list item
+              # does this line start with a bullet point? If so, do hanging indent
               docSplit[line_number] = ' ' + listWrapper.fill(docSplit[line_number].strip())
           else:
-              # use standard wrapping if not a list item
               docSplit[line_number] = docWrapper.fill(docSplit[line_number])
 
       return '\n'.join(docSplit)
