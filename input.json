@@ -15,40 +15,34 @@
    [
       {
          "name": "Eagle High School",
-         "city": "Seattle",
-         "state": "WA",
          "start_date": "2002",
          "end_date": "2004",
-         "degree": "not completed"
+         "degree": "not completed",
+         "description": "Played in the band"
       },
       {
          "name": "Unicorn High School",
-         "city": "Redmond",
-         "state": "WA",
          "start_date": "2004",
          "end_date": "2006",
-         "degree": "GED"
+         "degree": "GED",
+         "description": "Took derivatives"
       }
    ],
    "experience":
    [
 	  {
          "name": "Boring Books",
-         "city": "Seattle",
-         "state": "WA",
-         "start_date": "2002-01",
-         "end_date": "2004-01",
          "title": "Page Turner",
-		 "description": "Turned over 10000+ pages for customers and myself."
+         "start_date": "Jan 2002",
+         "end_date": "Jan 2004",
+		 "description": "- Turned over 10000+ pages for customers and myself. \n\n - Promoted to executive page turner within a month"
       },
       {
          "name": "Tepid Tea",
-         "city": "Redmond",
-         "state": "WA",
-         "start_date": "2004-07",
-         "end_date": "2006-07",
          "title": "Tea Timer",
-		 "description": "Ensured tea wasn't consumed until cooled."
+         "start_date": "July 2004",
+         "end_date": "July 2006",
+		 "description": "Ensured tea wasn't consumed until cooled. Maximized number of billable hours by adding impurities to tea, thereby elevating the boiling point and increasing the tea's cooling time."
       }
    ]
 }

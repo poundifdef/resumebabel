@@ -1,7 +1,3 @@
-{# define variables here #}\
-{% with 
-    line = line_char * column_width %}\
-{# start template here #}\
 ${contact.fname} ${contact.lname}
 
 ${contact.street}
@@ -9,25 +5,21 @@ ${contact.city}, ${contact.state} ${contact.zip}
 ${contact.email}
 ${contact.phone}
 
-${line}
-
 OBJECTIVE
 
 ${objective}
 
 WORK EXPERIENCE
 {% for key, job in enumerate(experience) %}
-${job.start_date} - ${job.end_date}
-${job.title} @ ${job.name} ${job.city}, ${job.state}
+${job.name} (${job.start_date} - ${job.end_date})
+${job.title}
 
- ${bullet} ${job.description} 
-{% end %}\
-
+${job.description} 
+{% end %}
 EDUCATION
 {% for key, school in enumerate(education) %}
-${education[key].start_date} - ${education[key].end_date}
-${school.name}
-${school.city}, ${school.state}
-${education[key].degree}
-{% end %}\
+${school.name} (${education[key].start_date} - ${education[key].end_date})
+${school.degree}
+
+${school.description}
 {% end %}
