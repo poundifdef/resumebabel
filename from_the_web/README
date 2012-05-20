@@ -20,10 +20,11 @@ Steve Yegge on Plain text:
 
     Relevant excerpt:
 
-        Your resume is going to go through a bunch of automated transformation tools and
-        will be mangled horribly along the way. Any non-ASCII character, such as those
-        nonstandard Microsoft Word bullets, or any accented character, or (heaven help
-        you) Unicode will be turned into our old favorite, the question-mark character ("?").
+        Your resume is going to go through a bunch of automated transformation
+        tools and will be mangled horribly along the way. Any non-ASCII
+        character, such as those nonstandard Microsoft Word bullets, or any
+        accented character, or (heaven help you) Unicode will be turned into
+        our old favorite, the question-mark character ("?").
 
         You don't want your resume to look like this:
 
@@ -31,16 +32,18 @@ Steve Yegge on Plain text:
           ?Experience
             1997?Present?  Vice?F???**??didn?t?do?sh???for?ten?yea???
 
-        So write it in plain text. Yes. Text. You know. Like from a typewriter, or
-        Windows Notepad. ABCs, not PDF.
+        So write it in plain text. Yes. Text. You know. Like from a typewriter,
+        or Windows Notepad. ABCs, not PDF.
 
-        Don't expect any whitespace to make it through except newlines and single spaces.
-        And don't assume your resume will be viewed in a fixed-width font. If you make
-        a nice pretty formatted table using tab characters, it will look like ascii-art
-        smoke signals by the time a human being looks at it.
+        Don't expect any whitespace to make it through except newlines and
+        single spaces. And don't assume your resume will be viewed in a
+        fixed-width font. If you make a nice pretty formatted table using tab
+        characters, it will look like ascii-art smoke signals by the time a
+        human being looks at it.
 
-        The maximum amount of ASCII art you can get away with, and even this is
-        stretching it, is hyphenated lines and bullets. For instance, this might be OK:
+        The maximum amount of ASCII art you can get away with, and even this
+        is stretching it, is hyphenated lines and bullets. For instance, this
+        might be OK:
 
         Education
         ---------
@@ -50,15 +53,17 @@ Steve Yegge on Plain text:
 
         But I wouldn't overdo it.
 
-        If your name has accent characters in it, your best bet is to change your name.
-        For instance, if your name is Pièrre l'Éléphant, think about whether you'd
-        prefer to have it seen as "Pi?rre l'?l?phant" or "Pierre l'Elephant". Sure,
-        your accented characters might make it through, but I'd play it safe.
+        If your name has accent characters in it, your best bet is to change
+        your name. For instance, if your name is Pièrre l'Éléphant, think
+        about whether you'd prefer to have it seen as "Pi?rre l'?l?phant" or
+        "Pierre l'Elephant". Sure, your accented characters might make it
+        through, but I'd play it safe.
 
-        HTML formatting usually makes it through safely because it's plain text. However,
-        even if your tags are left alone by the automated mangler, there's no guarantee 
-        that your resume will be viewed from a browser, and nobody wants to read through
-        a bunch of ugly markup while they're trying to assess your skills. So you
-        shouldn't use HTML either.
+        HTML formatting usually makes it through safely because it's plain
+        text. However, even if your tags are left alone by the automated
+        mangler, there's no guarantee that your resume will be viewed from
+        a browser, and nobody wants to read through a bunch of ugly markup
+        while they're trying to assess your skills. So you shouldn't use HTML
+        either.
 
         Text! All the best resumes are plain text. Use text.
