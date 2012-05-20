@@ -18,14 +18,14 @@
          "start_date": "2002",
          "end_date": "2004",
          "degree": "not completed",
-         "description": "Played in the band"
+         "description": "- Played in the band"
       },
       {
          "name": "Unicorn High School",
          "start_date": "2004",
          "end_date": "2006",
          "degree": "GED",
-         "description": "Took derivatives"
+         "description": "- Took derivatives and integrals"
       }
    ],
    "experience":
@@ -35,14 +35,14 @@
          "title": "Page Turner",
          "start_date": "Jan 2002",
          "end_date": "Jan 2004",
-		 "description": "- Turned over 10000+ pages for customers and myself. \n\n - Promoted to executive page turner within a month"
+		 "description": "- Turned over 10000+ pages for customers and myself. \n - Promoted to executive page turner within a month"
       },
       {
          "name": "Tepid Tea",
          "title": "Tea Timer",
          "start_date": "July 2004",
          "end_date": "July 2006",
-		 "description": "Ensured tea wasn't consumed until cooled. Maximized number of billable hours by adding impurities to tea, thereby elevating the boiling point and increasing the tea's cooling time."
+		 "description": "- Ensured tea wasn't consumed until cooled. Maximized number of billable hours by adding impurities to tea, thereby elevating the boiling point and increasing the tea's cooling time."
       }
    ]
 }
