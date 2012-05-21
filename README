@@ -27,4 +27,5 @@ Upcoming formats:
 
 Dependencies:
 
-   * HTML, TXT templating: genshi (http://genshi.edgewall.org/)
+   * HTML, TXT templating: jinja (http://jinja.pocoo.org/)
+   * phasing out: genshi (http://genshi.edgewall.org/)

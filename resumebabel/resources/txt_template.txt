@@ -1,28 +1,28 @@
-${resume.contact.fname} ${resume.contact.lname}
-${resume.contact.street}
-${resume.contact.city}, ${resume.contact.state} ${resume.contact.zip}
-${resume.contact.email}
-${resume.contact.phone}
+{{resume.contact.fname}} {{resume.contact.lname}}
+{{resume.contact.street}}
+{{resume.contact.city}}, {{resume.contact.state}} {{resume.contact.zip}}
+{{resume.contact.email}}
+{{resume.contact.phone}}
 
 OBJECTIVE
 ---------
-${resume.objective}
+{{resume.objective }}
 
 
 WORK EXPERIENCE
 ---------------
-{% for key, job in enumerate(resume.experience) %}${job.name} (${job.start_date} - ${job.end_date})
-${job.title}
+{% for job in resume.experience %}{{job.name}} ({{job.start_date}} - {{job.end_date}})
+{{job.title}}
 
-${job.description} 
+{{job.description}}
 
-{% end %}
+{% endfor %}
 EDUCATION
 ---------
-{% for key, school in enumerate(resume.education) %}
-${school.name} (${school.start_date} - ${school.end_date})
-${school.degree}
+{% for school in resume.education %}
+{{school.name}} ({{school.start_date}} - {{school.end_date}})
+{school.degree}
 
-${school.description}
-{% end %}
+{{school.description}}
+{% endfor %}
 

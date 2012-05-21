@@ -1,9 +1,10 @@
-from genshi.template import NewTextTemplate, TemplateLoader
 import re
 from textwrap import TextWrapper
 from copy import deepcopy
 
 from converter_parent import ConverterParent
+
+from jinja2 import Template, PackageLoader, Environment
 
 
 class TXTConverter(ConverterParent):
@@ -28,11 +29,9 @@ class TXTConverter(ConverterParent):
    def do_conversion(self):
       template_filename = self.get_resource('txt_template.txt') 
 
-      loader = TemplateLoader('.')
-      templ = loader.load(template_filename, cls=NewTextTemplate)
-      stream = templ.generate(**self.preprocessed)
-
-      self.generated_resume = stream.render('text')
+      env = Environment(loader=PackageLoader('resumebabel', 'resources'))
+      template = env.get_template('txt_template.txt')
+      self.generated_resume = template.render(**self.preprocessed)
       
    def postprocess_resume(self):
       self.generated_resume = self.wrap(self.generated_resume)
