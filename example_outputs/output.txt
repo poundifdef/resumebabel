@@ -30,11 +30,11 @@ EDUCATION
 ---------
 
 Eagle High School (2002 - 2004)
-{school.degree}
+not completed
 
 - Played in the band
 
 Unicorn High School (2004 - 2006)
-{school.degree}
+GED
 
 - Took derivatives and integrals

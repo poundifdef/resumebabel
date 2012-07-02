@@ -21,7 +21,7 @@ EDUCATION
 ---------
 {% for school in resume.education %}
 {{school.name}} ({{school.start_date}} - {{school.end_date}})
-{school.degree}
+{{school.degree}}
 
 {{school.description}}
 {% endfor %}
