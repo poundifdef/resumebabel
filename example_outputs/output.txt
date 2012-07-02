@@ -1,41 +1,40 @@
 John Doe
-
 81321 Odd Numbered Drive Apt 3455
 New York, NY 11235
 john@example.com
 123-456-7890
 
-****************************************
-
 OBJECTIVE
+---------
+A position in the field of computers with special interests in business
+applications programming, information processing, and management systems.
 
-A position in the field of computers
-with special interests in business
-applications programming, information
-processing, and management systems.
 
 WORK EXPERIENCE
+---------------
+Boring Books (Jan 2002 - Jan 2004)
+Page Turner
 
-2002-01 - 2004-01
-Page Turner @ Boring Books Seattle, WA
+- Turned over 10000+ pages for customers and myself.
+- Promoted to executive page turner within a month
 
- ~ Turned over 10000+ pages for
-   customers and myself.
+Tepid Tea (July 2004 - July 2006)
+Tea Timer
 
-2004-07 - 2006-07
-Tea Timer @ Tepid Tea Redmond, WA
+- Ensured tea wasn't consumed until cooled. Maximized number of billable hours
+by adding impurities to tea, thereby elevating the boiling point and increasing
+the tea's cooling time.
 
- ~ Ensured tea wasn't consumed until
-   cooled.
 
 EDUCATION
+---------
 
-2002 - 2004
-Eagle High School
-Seattle, WA
-not completed
+Eagle High School (2002 - 2004)
+{school.degree}
 
-2004 - 2006
-Unicorn High School
-Redmond, WA
-GED
+- Played in the band
+
+Unicorn High School (2004 - 2006)
+{school.degree}
+
+- Took derivatives and integrals
