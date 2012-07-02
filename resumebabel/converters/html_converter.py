@@ -1,25 +1,27 @@
 from copy import deepcopy
-from genshi.template import MarkupTemplate, TemplateLoader
 
 from converter_parent import ConverterParent
 
+from jinja2 import Template, PackageLoader, Environment
+
 class HTMLConverter(ConverterParent):
-   def preprocess_resume(self):
-      # TODO: htmlencode 
-      # TODO: markdown to html
-      self.hresume = deepcopy(self.resume)
+    def __init__(self, resume):
+        self.preprocessed = {}
+        super(HTMLConverter, self).__init__(resume)
 
-      # TODO: Convert json to hresume-specific formats (ie iso date format)
-      self.hresume['hresume'] = deepcopy(self.resume)
-      #return hresume
+    def preprocess_resume(self):
+        # TODO: htmlencode
+        # TODO: markdown to html
+        self.preprocessed['resume'] = self.resume
+        self.preprocessed['hresume'] = deepcopy(self.resume)
 
-   def do_conversion(self):
-      #r = self.convert_to_hresume()
+        # TODO: Convert json to hresume-specific formats (ie iso date format)
+        # self.preprocessed['hresume'] = CONVERT_HRESUME_FORMATS_HERE()
 
-      loader = TemplateLoader('.')
-      templ = loader.load(self.get_resource('html_template.html')) 
-      stream = templ.generate(**self.hresume)
-      #stream = templ.generate(**r)
+    def do_conversion(self):
+        template_filename = self.get_resource('html_template.html')
 
-      # TODO: output to file? method param for this?
-      self.generated_resume = stream.render('xhtml')
+        env = Environment(loader=PackageLoader('resumebabel', 'resources'))
+        template = env.get_template('html_template.html')
+        self.generated_resume = template.render(**self.preprocessed)
+        # TODO: output to file? method param for this?

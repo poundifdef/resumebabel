@@ -1,41 +1,45 @@
 <html xmlns:py="http://genshi.edgewall.org/">
    <head>
       <title>
-         ${hresume.contact.fname} ${hresume.contact.lname} - Resume
+         {{hresume.contact.fname}} {{hresume.contact.lname}} - Resume
       </title>
    </head>
    <body class="hresume">
       <div class="vcard contact">
          <h1 class="fn n">
-            <span class="given-name">${hresume.contact.fname}</span> 
-            <span class="family-name">${hresume.contact.lname}</span>
+            <span class="given-name">{{hresume.contact.fname}}</span>
+            <span class="family-name">{{hresume.contact.lname}}</span>
          </h1>
 
-         <span class="email">${hresume.contact.email}</span> <br />
-         <span class="tel">${hresume.contact.phone}</span> <br /><br />
+         <span class="email">{{hresume.contact.email}}</span> <br />
+         <span class="tel">{{hresume.contact.phone}}</span> <br /><br />
 
          <span class="adr">
-            <span class="street-address">${hresume.contact.street}</span> <br />
-            <span class="locality">${hresume.contact.city}</span>,
-            <span class="region">${hresume.contact.state}</span>
-            <span class="postal-code">${hresume.contact.zip}</span> <br />
+            <span class="street-address">{{hresume.contact.street}}</span> <br />
+            <span class="locality">{{hresume.contact.city}}</span>,
+            <span class="region">{{hresume.contact.state}}</span>
+            <span class="postal-code">{{hresume.contact.zip}}</span> <br />
          </span>
       </div>
 
-      <div class="vcalendar" py:for="key, school in enumerate(hresume.education)">
+      {% for school in resume.education %}
+
+      {{ loop.index0 }}
+      <div class="vcalendar">
         <div class="education vevent">
           <div class="summary vcard">
-            <span class="location fn org">${school.name}</span>
-            <span class="description">${education[key].degree}</span>
+            <span class="location fn org">{{school.name}}</span>
+            <span class="description">{{school.degree}}</span>
             <div class="adr">
-              <span class="locality">${school.city}</span>, 
-              <abbr class="region" title="Alaska">${school.state}</abbr>
+              <span class="locality">{{school.city}}</span>,
+              <abbr class="region" title="Alaska">{{school.state}}</abbr>
             </div>
           </div>
-          (<abbr class="dtstart" title="${school.start_date}">${education[key].start_date}</abbr> - 
-           <abbr class="dtend" title="${school.end_date}">${education[key].end_date}</abbr>)
+          (<abbr class="dtstart" title="{{hresume.education[loop.index0].start_date}}">{{school.start_date}}</abbr> -
+           <abbr class="dtend" title="{{hresume.education[loop.index0].end_date}}">{{school.end_date}}</abbr>)
         </div>
       </div>
+      {% endfor %}
 
    </body>
 </html>
