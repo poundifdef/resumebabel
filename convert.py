@@ -1,3 +1,4 @@
+import collections
 import json
 import os
 import sys
@@ -25,7 +26,7 @@ if __name__ == '__main__':
     resume_converter_class = get_class(module_name)
 
     fd = open(input_json)
-    resume = json.load(fd)
+    resume = json.load(fd, object_pairs_hook=collections.OrderedDict)
 
     r = resume_converter_class(resume)
     r.process_resume(output_file)

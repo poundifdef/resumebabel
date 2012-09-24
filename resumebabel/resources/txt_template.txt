@@ -1,28 +1,43 @@
-{{resume.contact.fname}} {{resume.contact.lname}}
-{{resume.contact.street}}
-{{resume.contact.city}}, {{resume.contact.state}} {{resume.contact.zip}}
+{{resume.contact.name}}
+{{resume.contact.location}}
 {{resume.contact.email}}
 {{resume.contact.phone}}
 
+{% if resume.objective -%}
 OBJECTIVE
 ---------
-{{resume.objective }}
+{{resume.objective}}
+{% endif -%}
 
 
-WORK EXPERIENCE
----------------
-{% for job in resume.experience %}{{job.name}} ({{job.start_date}} - {{job.end_date}})
-{{job.title}}
-
-{{job.description}}
-
+EXPERIENCE
+----------
+{% for experience_title, experience in resume.experiences.iteritems() %}
+{{ experience_title }}
+{% for details in experience %}
+{% if not details.title and not details.location and details.date -%}
+{{ details.name }} ({{details.date}})
+{% else -%}
+{{ details.name }} {% if details.location %}({{details.location}}){% endif %}
+{% if details.title -%}
+{{ details.title }}
+{% endif -%}
+{% if details.date -%}
+{{ details.date }}
+{% endif -%}
+{% endif -%}
+{% if details.description -%}
+{{ details.description }}
+{% endif -%}
+{% endfor -%}
 {% endfor %}
+
 EDUCATION
 ---------
 {% for school in resume.education %}
-{{school.name}} ({{school.start_date}} - {{school.end_date}})
-{{school.degree}}
+{{school.name}} {% if school.date %} ({{school.date}}) {% endif %}
+{% if school.degree %} {{school.degree}} {% endif %}
 
-{{school.description}}
+{% if school.description %} {{school.description}} {% endif %}
 {% endfor %}
 

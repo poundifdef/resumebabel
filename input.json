@@ -1,48 +1,152 @@
 {
    "contact":
    {
-      "fname": "John",
-      "lname": "Doe",
-      "email": "john@example.com",
-      "phone": "123-456-7890",
-      "street": "81321 Odd Numbered Drive Apt 3455",
-      "city": "New York",
-      "state": "NY",
-      "zip": "11235"
+      "name": "Jay Goel",
+      "email": "dev@jaygoel.com",
+      "phone": "919-889-8223",
+      "location": "New York, NY"
    },
-   "objective":"A position in the field of computers with special interests in business applications programming, information processing, and management systems.",
+   "objective":"",
    "education":
-   [
+      [
       {
-         "name": "Eagle High School",
-         "start_date": "2002",
-         "end_date": "2004",
-         "degree": "not completed",
-         "description": "- Played in the band"
-      },
-      {
-         "name": "Unicorn High School",
-         "start_date": "2004",
-         "end_date": "2006",
-         "degree": "GED",
-         "description": "- Took derivatives and integrals"
+         "name": "North Carolina State University",
+         "date": "",
+         "degree": "B.S. in Computer Scence, Minors in English and Business Administration",
+         "description": ""
       }
    ],
-   "experience":
-   [
-	  {
-         "name": "Boring Books",
-         "title": "Page Turner",
-         "start_date": "Jan 2002",
-         "end_date": "Jan 2004",
-		 "description": "- Turned over 10000+ pages for customers and myself. \n - Promoted to executive page turner within a month"
-      },
-      {
-         "name": "Tepid Tea",
-         "title": "Tea Timer",
-         "start_date": "July 2004",
-         "end_date": "July 2006",
-		 "description": "- Ensured tea wasn't consumed until cooled. Maximized number of billable hours by adding impurities to tea, thereby elevating the boiling point and increasing the tea's cooling time."
-      }
-   ]
+   "experiences":
+   {
+      "Professional Experience":
+         [
+         {
+            "name": "Lot18",
+            "location": "New York, NY",
+            "title": "Backend Engineer",
+            "date": "2011 - present",
+            "description": "- Backend functionality"
+         },
+         {
+            "name": "Fidelity Investments",
+            "location": "Research Triangle Park, NC",
+            "title": "Software Engineer",
+            "date": "2010 - 2011",
+            "description": "- Added functionality to make invoicing software, written in C# and ASP.NET, compliant with new 401k Fee Dislcosure regulations. Implemented automated and deploy scripts using NAnt, previously a manual process. Implemented automated NUnit testing for our code base. One of two developers responsible for enhancements and maintainence. \n - On a separate project, helped convert a 3270-based mainframe application to a web interface, using JSP and Java for web development."
+         },
+         {
+            "name": "Altissimo Tech, LLC",
+            "title": "Owner",
+            "date": "2011 - present",
+            "description": "Owner of small business specializing in software and hardware technologies. Currently selling an ATX-to-bench power supply, a device which re-purposes a computer power supply to power other electronic devices. I designed a printed circuit board, plastic enclosure, and the interconnection of all components, in addition to iteratively prototyping the design and launching the final product. \n Power Supply: http://jaygoel.com/projects/powersupply/"
+         },
+         {
+            "name": "IBM",
+            "location": "Research Triangle Park, NC",
+            "title": "Software Engineer Intern",
+            "date": "2007 - 2008",
+            "description": "Developed data validation tool for Mainframe for Networks on z/OS; responsible for developing design of tool in addition to developing the tool itself; written in C and Java. Developed new functionality for OMEGAMON XE. Maintained testing and automation tools for Linux on z/VM."
+         },
+         {
+            "name": "Kids Gotta Learn",
+            "location": "Raleigh NC",
+            "title": "Software Developer",
+            "date": "2006 - 2008",
+            "description": "Developed custom software for company use. Wrote algorithms to automatically generate math practice problems and then create PDF worksheets of those problems. Wrote website using PHP and MySQL, and manage web services and email."
+         },
+         {
+            "name": "Praxis Studios",
+            "location": "Raleigh, NC",
+            "title": "Software Developer",
+            "date": "2006 - 2007",
+            "description": "Worked with clients and designers to develop custom websites which had PHP front ends and retrieved content from a MySQL database. Upgraded and maintained in-house content management system. Provided first level technical support."
+         }
+      ],
+      "Open Source":
+      [
+         {
+            "name": "Github: http://www.github.com/poundifdef",
+            "description": "Open source projects I manage and work on."
+         },
+         {
+            "name": "Stackoverflow: http://stackoverflow.com/users/3788/poundifdef",
+            "description": "My contributions to the Stackoverflow programmers' question-and-answer website."
+         }
+      ],
+      "Research and Projects":
+      [
+         {
+            "name": "Minutes Checker, Virgin Mobile",
+            "date": "2011",
+            "description": "Created and maintain open-source Android application (using Java) to automatically check how many monthly minutes remain on my cell phone plan. The code is hosted on github, and several people have contributed patches. The app has more than 15,000 active users and a 5-star rating on the Android Market. \n\n Android Market page: https://market.android.com/details?id=com.jaygoel.virginminuteschecker \n Github project page: https://github.com/poundifdef/VirginMobileMinutesChecker"
+         },
+         {
+            "name": "Autonomous Glockenspiel",
+            "date": "2010",
+            "description": "For a class on wireless sensor networks, we programmed SunSPOT microcontrollers, which use an embedded JDK, to automatically play a physical musical instrument. \n\n Videos, pictures, and description: http://jaygoel.com/projects/glockenspiel/"
+         },
+         {
+            "name": "Architecting TCP/IP for SILO Network Architecture",
+            "date": "2010",
+            "description": "Wrote honors thesis on how one would architect TCP's functionality within a different networking framework. Implemented prototype of this in C++ on Linux, and created virtual machine images of the stack so that it could be easily deployed and tested. \n\nFinal report: http://jaygoel.com/projects/net-silos/"
+         },
+         {
+            "name": "Practical Graph Mining with R",
+            "date": "2009",
+            "description": "(to appear) Wrote book chapter with peers on graph classification algorithms, along with R implementations. \n\nSource code: http://jaygoel.com/projects/graph-mining/"
+         }
+      ],
+      "Awards and Honors":
+      [
+         {
+            "name": "Honorable Mention for NSF's Graduate Research Fellowship Program",
+            "date": "2011",
+            "description": "The National Science Foundation accepts approximately 2,000 students to provide three years of funding for graduate work along with a living stipend every year. An additional 2,000 students receive an honorable mention and access to NSF grid computing resources."
+         },
+         {
+            "name": "Donald L. Bitzer Creativity Award - $500",
+            "date": "2010",
+            "description": "North Carolina State University"
+         },
+         {
+            "name": "Member of Upsilon Pi Epsilon",
+            "date": "2010",
+            "description": ""
+         },
+         {
+            "name": "Research Experiences for Undergraduates - $6,400",
+            "date": "2009",
+            "description": "National Science Foundation"
+         },
+         {
+            "name": "Carol Miller Student Leadership Endowment - $1,000)",
+            "date": "2009",
+            "description": "North Carolina State University"
+         }
+
+      ], 
+      "Teaching and Service":
+      [
+         {
+            "name": "Community Volunteer",
+            "date": "2010",
+            "description": "Fidelity Investments often provides opportunities for employees to volunteer in local schools. With other colleagues, we set up dozens of donated computers at a local middle school. I critiqued resumes and given career gudiance for high school students, in addition to meeting with students on our campus as part of a Teach for America initiative. I was recognized by the company, with 60 other associates, for my engagement."
+         },
+         {
+            "name": "Teaching Assistant",
+            "date": "2009",
+            "description": "CSC 116: Introduction to Computing - Java"
+         },
+         {
+            "name": "Co-President",
+            "date": "2009 - 2010",
+            "description": "NCSU Association for Computing Machinery (ACM)"
+         },
+         {
+            "name": "Columnist",
+            "date": "2008 - 2010",
+            "description": "Columnist for the \"Technician\", NCSU's daily student newspaper."
+         }
+      ]
+   }
 }
