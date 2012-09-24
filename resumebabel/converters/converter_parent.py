@@ -17,11 +17,9 @@ class ConverterParent(object):
     def postprocess_resume(self):
         pass
 
-    def process_resume(self, outputFile):
+    def process_resume(self):
         self.preprocess_resume()
         self.do_conversion()
         self.postprocess_resume()
 
-        with open(outputFile, "w") as fd:
-            fd.write(self.generated_resume)
-
+        return self.generated_resume

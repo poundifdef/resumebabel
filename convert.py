@@ -2,31 +2,20 @@ import collections
 import json
 import os
 import sys
+from resumebabel.resumebabel import ResumeBabel
 
-
-# http://stackoverflow.com/a/452981/3788
-def get_class(kls):
-    parts = kls.split('.')
-    module = ".".join(parts[:-1])
-    m = __import__(module)
-    for comp in parts[1:]:
-        m = getattr(m, comp)
-    return m
 
 if __name__ == '__main__':
     input_json = sys.argv[1]
     output_file = sys.argv[2]
-    output_format = (os.path.splitext(output_file)[1])[1:]
 
     # TODO: make sure output_format is not empty
+    output_format = (os.path.splitext(output_file)[1])[1:]
 
-    module_name = ('resumebabel.converters.' + output_format + '_converter.' +
-                   output_format.upper() + 'Converter')
 
-    resume_converter_class = get_class(module_name)
+    resume = open(input_json).read()
+    r = ResumeBabel(resume)
 
-    fd = open(input_json)
-    resume = json.load(fd, object_pairs_hook=collections.OrderedDict)
-
-    r = resume_converter_class(resume)
-    r.process_resume(output_file)
+    out_fd = open(output_file, 'wb')
+    out_fd.write(r.export_resume(output_format))
+    out_fd.close()
