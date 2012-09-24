@@ -1,40 +1,144 @@
-John Doe
-81321 Odd Numbered Drive Apt 3455
-New York, NY 11235
-john@example.com
-123-456-7890
+Jay Goel
+New York, NY
+dev@jaygoel.com
+919-889-8223
 
-OBJECTIVE
----------
-A position in the field of computers with special interests in business
-applications programming, information processing, and management systems.
+EXPERIENCE
+----------
 
+Professional Experience
 
-WORK EXPERIENCE
----------------
-Boring Books (Jan 2002 - Jan 2004)
-Page Turner
+Lot18 (New York, NY)
+Backend Engineer
+2011 - present
+- Backend functionality
 
-- Turned over 10000+ pages for customers and myself.
-- Promoted to executive page turner within a month
+Fidelity Investments (Research Triangle Park, NC)
+Software Engineer
+2010 - 2011
+- Added functionality to make invoicing software, written in C# and ASP.NET,
+compliant with new 401k Fee Dislcosure regulations. Implemented automated and
+deploy scripts using NAnt, previously a manual process. Implemented automated
+NUnit testing for our code base. One of two developers responsible for
+enhancements and maintainence.
+- On a separate project, helped convert a 3270-based mainframe application to a
+web interface, using JSP and Java for web development.
 
-Tepid Tea (July 2004 - July 2006)
-Tea Timer
+Altissimo Tech, LLC
+Owner
+2011 - present
+Owner of small business specializing in software and hardware technologies.
+Currently selling an ATX-to-bench power supply, a device which re-purposes a
+computer power supply to power other electronic devices. I designed a printed
+circuit board, plastic enclosure, and the interconnection of all components, in
+addition to iteratively prototyping the design and launching the final product.
+Power Supply: http://jaygoel.com/projects/powersupply/
 
-- Ensured tea wasn't consumed until cooled. Maximized number of billable hours
-by adding impurities to tea, thereby elevating the boiling point and increasing
-the tea's cooling time.
+IBM (Research Triangle Park, NC)
+Software Engineer Intern
+2007 - 2008
+Developed data validation tool for Mainframe for Networks on z/OS; responsible
+for developing design of tool in addition to developing the tool itself; written
+in C and Java. Developed new functionality for OMEGAMON XE. Maintained testing
+and automation tools for Linux on z/VM.
+
+Kids Gotta Learn (Raleigh NC)
+Software Developer
+2006 - 2008
+Developed custom software for company use. Wrote algorithms to automatically
+generate math practice problems and then create PDF worksheets of those
+problems. Wrote website using PHP and MySQL, and manage web services and email.
+
+Praxis Studios (Raleigh, NC)
+Software Developer
+2006 - 2007
+Worked with clients and designers to develop custom websites which had PHP front
+ends and retrieved content from a MySQL database. Upgraded and maintained in-
+house content management system. Provided first level technical support.
+
+Open Source
+
+Github: http://www.github.com/poundifdef
+Open source projects I manage and work on.
+
+Stackoverflow: http://stackoverflow.com/users/3788/poundifdef
+My contributions to the Stackoverflow programmers' question-and-answer website.
+
+Research and Projects
+
+Minutes Checker, Virgin Mobile (2011)
+Created and maintain open-source Android application (using Java) to
+automatically check how many monthly minutes remain on my cell phone plan. The
+code is hosted on github, and several people have contributed patches. The app
+has more than 15,000 active users and a 5-star rating on the Android Market.
+
+Android Market page:
+https://market.android.com/details?id=com.jaygoel.virginminuteschecker
+Github project page: https://github.com/poundifdef/VirginMobileMinutesChecker
+
+Autonomous Glockenspiel (2010)
+For a class on wireless sensor networks, we programmed SunSPOT microcontrollers,
+which use an embedded JDK, to automatically play a physical musical instrument.
+
+Videos, pictures, and description: http://jaygoel.com/projects/glockenspiel/
+
+Architecting TCP/IP for SILO Network Architecture (2010)
+Wrote honors thesis on how one would architect TCP's functionality within a
+different networking framework. Implemented prototype of this in C++ on Linux,
+and created virtual machine images of the stack so that it could be easily
+deployed and tested.
+
+Final report: http://jaygoel.com/projects/net-silos/
+
+Practical Graph Mining with R (2009)
+(to appear) Wrote book chapter with peers on graph classification algorithms,
+along with R implementations.
+
+Source code: http://jaygoel.com/projects/graph-mining/
+
+Awards and Honors
+
+Honorable Mention for NSF's Graduate Research Fellowship Program (2011)
+The National Science Foundation accepts approximately 2,000 students to provide
+three years of funding for graduate work along with a living stipend every year.
+An additional 2,000 students receive an honorable mention and access to NSF grid
+computing resources.
+
+Donald L. Bitzer Creativity Award - $500 (2010)
+North Carolina State University
+
+Member of Upsilon Pi Epsilon (2010)
+
+Research Experiences for Undergraduates - $6,400 (2009)
+National Science Foundation
+
+Carol Miller Student Leadership Endowment - $1,000 (2009)
+North Carolina State University
+
+Teaching and Service
+
+Community Volunteer (2010)
+Fidelity Investments often provides opportunities for employees to volunteer in
+local schools. With other colleagues, we set up dozens of donated computers at a
+local middle school. I critiqued resumes and given career gudiance for high
+school students, in addition to meeting with students on our campus as part of a
+Teach for America initiative. I was recognized by the company, with 60 other
+associates, for my engagement.
+
+Teaching Assistant (2009)
+CSC 116: Introduction to Computing - Java
+
+Co-President (2009 - 2010)
+NCSU Association for Computing Machinery (ACM)
+
+Columnist (2008 - 2010)
+Columnist for the "Technician", NCSU's daily student newspaper.
 
 
 EDUCATION
 ---------
 
-Eagle High School (2002 - 2004)
-not completed
+North Carolina State University
+B.S. in Computer Scence, Minors in English and Business Administration
 
-- Played in the band
 
-Unicorn High School (2004 - 2006)
-GED
-
-- Took derivatives and integrals

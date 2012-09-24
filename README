@@ -14,10 +14,10 @@ a pull request!
 Supported formats:
 
    * JSON 
+   * Plain text
 
 Upcoming formats:
 
-   * Plain text (in progress)
    * HTML with hResume (in progress)
    * LaTeX (in progress)
    * PDF
