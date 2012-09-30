@@ -10,8 +10,10 @@ OBJECTIVE
 {% endif -%}
 
 
+{% if resume.experience -%}
 EXPERIENCE
 ----------
+{% endif -%}
 {% for experience_title, experience in resume.experiences.iteritems() %}
 == {{ experience_title }} ==
 {% for details in experience %}
@@ -32,8 +34,10 @@ EXPERIENCE
 {% endfor -%}
 {% endfor %}
 
+{% if resume.education -%}
 EDUCATION
 ---------
+{% endif -%}
 {% for school in resume.education %}
 {{school.name}} {% if school.date %} ({{school.date}}) {% endif %}
 {% if school.degree %} {{school.degree}} {% endif %}
