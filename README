@@ -18,11 +18,7 @@ Supported formats:
 
 Upcoming formats:
 
-   * HTML with hResume (in progress)
-   * LaTeX (in progress)
-   * PDF
-   * RTF
-   * DOC
+   * HTML (in progress)
    * ...others? fork me on github!
 
 Dependencies:
