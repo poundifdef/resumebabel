@@ -6,7 +6,7 @@ dev@jaygoel.com
 EXPERIENCE
 ----------
 
-Professional Experience
+== Professional Experience ==
 
 Lot18 (New York, NY)
 Backend Engineer
@@ -56,7 +56,7 @@ Worked with clients and designers to develop custom websites which had PHP front
 ends and retrieved content from a MySQL database. Upgraded and maintained in-
 house content management system. Provided first level technical support.
 
-Open Source
+== Open Source ==
 
 Github: http://www.github.com/poundifdef
 Open source projects I manage and work on.
@@ -64,7 +64,7 @@ Open source projects I manage and work on.
 Stackoverflow: http://stackoverflow.com/users/3788/poundifdef
 My contributions to the Stackoverflow programmers' question-and-answer website.
 
-Research and Projects
+== Research and Projects ==
 
 Minutes Checker, Virgin Mobile (2011)
 Created and maintain open-source Android application (using Java) to
@@ -96,7 +96,7 @@ along with R implementations.
 
 Source code: http://jaygoel.com/projects/graph-mining/
 
-Awards and Honors
+== Awards and Honors ==
 
 Honorable Mention for NSF's Graduate Research Fellowship Program (2011)
 The National Science Foundation accepts approximately 2,000 students to provide
@@ -115,7 +115,7 @@ National Science Foundation
 Carol Miller Student Leadership Endowment - $1,000 (2009)
 North Carolina State University
 
-Teaching and Service
+== Teaching and Service ==
 
 Community Volunteer (2010)
 Fidelity Investments often provides opportunities for employees to volunteer in

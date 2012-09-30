@@ -13,7 +13,7 @@ OBJECTIVE
 EXPERIENCE
 ----------
 {% for experience_title, experience in resume.experiences.iteritems() %}
-{{ experience_title }}
+== {{ experience_title }} ==
 {% for details in experience %}
 {% if not details.title and not details.location and details.date -%}
 {{ details.name }} ({{details.date}})
