@@ -24,4 +24,5 @@ Upcoming formats:
 Dependencies:
 
    * HTML, TXT templating: jinja (http://jinja.pocoo.org/)
+   * Markdown: markdown2 (https://github.com/trentm/python-markdown2)
    * phasing out: genshi (http://genshi.edgewall.org/)

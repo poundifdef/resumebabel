@@ -1,4 +1,5 @@
 from copy import deepcopy
+import markdown2
 
 from converter_parent import ConverterParent
 
@@ -9,11 +10,17 @@ class HTMLConverter(ConverterParent):
         self.preprocessed = {}
         super(HTMLConverter, self).__init__(resume)
 
-    def preprocess_resume(self):
+    #def preprocess_resume(self):
         # TODO: htmlencode
         # TODO: markdown to html
-        self.preprocessed['resume'] = self.resume
-        self.preprocessed['hresume'] = deepcopy(self.resume)
+        self.preprocessed['resume'] = deepcopy(self.resume)
+
+        for experience_title, experiences in self.preprocessed['resume']['experiences'].iteritems():
+            for experience in experiences:
+                if experience.get('description'):
+                    experience['description'] = markdown2.markdown(experience['description'])
+
+        #self.preprocessed['hresume'] = deepcopy(self.resume)
 
         # TODO: Convert json to hresume-specific formats (ie iso date format)
         # self.preprocessed['hresume'] = CONVERT_HRESUME_FORMATS_HERE()

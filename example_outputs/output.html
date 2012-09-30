@@ -1,60 +1,554 @@
-<html xmlns:py="http://genshi.edgewall.org/">
-   <head>
-      <title>
-         John Doe - Resume
-      </title>
-   </head>
-   <body class="hresume">
-      <div class="vcard contact">
-         <h1 class="fn n">
-            <span class="given-name">John</span>
-            <span class="family-name">Doe</span>
-         </h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
 
-         <span class="email">john@example.com</span> <br />
-         <span class="tel">123-456-7890</span> <br /><br />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 
-         <span class="adr">
-            <span class="street-address">81321 Odd Numbered Drive Apt 3455</span> <br />
-            <span class="locality">New York</span>,
-            <span class="region">NY</span>
-            <span class="postal-code">11235</span> <br />
-         </span>
-      </div>
+<title>Jay Goel - CV</title>
 
-      
+<style type="text/css">
+body{
+    margin: 10;
+    padding: 0;
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 12pt;
+   width: 745px;
+   border-style: dotted;
+   border-width: 1px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-      <div class="vcalendar">
-        <div class="education vevent">
-          <div class="summary vcard">
-            <span class="location fn org">Eagle High School</span>
-            <span class="description">not completed</span>
-            <div class="adr">
-              <span class="locality"></span>,
-              <abbr class="region" title="Alaska"></abbr>
-            </div>
-          </div>
-          (<abbr class="dtstart" title="2002">2002</abbr> -
-           <abbr class="dtend" title="2004">2004</abbr>)
-        </div>
-      </div>
-      
+h2{
+    top: 3px;
+    left: 4px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: normal;
+}
 
-      <div class="vcalendar">
-        <div class="education vevent">
-          <div class="summary vcard">
-            <span class="location fn org">Unicorn High School</span>
-            <span class="description">GED</span>
-            <div class="adr">
-              <span class="locality"></span>,
-              <abbr class="region" title="Alaska"></abbr>
-            </div>
-          </div>
-          (<abbr class="dtstart" title="2004">2004</abbr> -
-           <abbr class="dtend" title="2006">2006</abbr>)
-        </div>
-      </div>
-      
+h3{
+    display: block;
+    margin: 10px;
+    padding: 0;
+    font-size: 30px;
+    font-weight: normal;
+    color: #005522;
+}
 
-   </body>
+.header{
+    display: block;
+    height: 102px;
+    border-bottom: 3pt solid black;
+}
+
+.jg_icon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.horizontal_nav{
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 87px;
+    /*left: 4px;*/
+    font-size: 18px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.horizontal_nav a{
+    color: black;
+    text-decoration: none;
+    padding: 3px;
+    margin-left: 30px;
+}
+
+.horizontal_nav a:hover{
+    color: white;
+    background-color: #005522;
+}
+
+.body_container{
+    padding: 0;
+    padding-top: 1px;
+text-align: center;
+}
+
+.nav_column{
+    display: block;
+    float: left;
+    width: 15%;
+    margin-left: 2%;
+    padding: 0;
+    border: 0px solid black;
+    border-bottom: none;
+}
+
+.nav_column ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav_column a{
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav_column li a{
+    padding: 3px;
+    font-size: 12pt;
+    border-bottom: 0px solid black;
+    color: blue;
+   text-align: right;
+   text-decoration: none;
+}
+
+.nav_column li a:hover{
+    color: white;
+    background-color: #005522;
+}
+
+.content_column{
+   text-align: left;
+    display: block;
+    width: 660px;
+    margin-right: auto;
+    margin-left: 2%;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 3pt;
+    font-size: 80%;
+}
+
+/************************************************
+
+                     PHOTOS
+
+http://www.xaprb.com/blog/2006/10/29/automatic-image-captions-with-unobtrusive-javascript/
+
+************************************************/
+.left {
+   float: left;
+   margin-right: 5px;
+}
+.right {
+   float: right;
+   margin-left: 5px;
+}
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+div.figure {
+   border: 1px solid #AAA;
+   padding: 5px;
+   text-align: center;
+   font-size: small;
+   text-decoration: none;  
+}
+
+table.cv {
+   font-size: 10pt;
+}
+table.cv td {
+   vertical-align: top;
+}
+
+.side {
+   clear: none;
+}
+
+h1 {
+   font-size: 20pt;
+}
+
+</style>
+
+</head> 
+
+<body>
+
+<h3>Jay Goel</h3>
+
+
+<div class="body_container">
+ New York, NY <br> 
+ dev@jaygoel.com <br> 
+ 919-889-8223 
+
+   <div class="content_column">
+
+      <table class="cv" cellpadding="3" cellspacing="3" b rde=ri0"> 
+
+
+<tr> 
+  <th colspan="2">Objective</th> 
+</tr> 
+<tr> 
+  <td colspan="2">
+     contribute to society utilizing my skills
+  </td>
+
+
+
+
+<tr> 
+  <th colspan="2">Education</th> 
+</tr> 
+
+<tr> 
+  <td>
+     
+     &nbsp;
+  </td>
+  <td> 
+    <b>North Carolina State University</b>
+     <br> B.S. in Computer Scence, Minors in English and Business Administration 
+    
+  </td> 
+</tr> 
+
+
+ 
+
+<tr> 
+  <th colspan="2">Professional Experience</th> 
+</tr> 
+
+
+<tr> 
+  <td>
+     2011 - present
+     &nbsp;
+  </td>
+  <td>
+     <b>Lot18</b>  (New York, NY) 
+      <br><i>Backend Engineer</i> 
+     <ul>
+<li>Backend functionality</li>
+</ul>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2010 - 2011
+     &nbsp;
+  </td>
+  <td>
+     <b>Fidelity Investments</b>  (Research Triangle Park, NC) 
+      <br><i>Software Engineer</i> 
+     <ul>
+<li>Added functionality to make invoicing software, written in C# and ASP.NET, compliant with new 401k Fee Dislcosure regulations. Implemented automated and deploy scripts using NAnt, previously a manual process. Implemented automated NUnit testing for our code base. One of two developers responsible for enhancements and maintainence.</li>
+<li>On a separate project, helped convert a 3270-based mainframe application to a web interface, using JSP and Java for web development.</li>
+</ul>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2011 - present
+     &nbsp;
+  </td>
+  <td>
+     <b>Altissimo Tech, LLC</b> 
+      <br><i>Owner</i> 
+     <p>Owner of small business specializing in software and hardware technologies. Currently selling an ATX-to-bench power supply, a device which re-purposes a computer power supply to power other electronic devices. I designed a printed circuit board, plastic enclosure, and the interconnection of all components, in addition to iteratively prototyping the design and launching the final product. 
+ Power Supply: http://jaygoel.com/projects/powersupply/</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2007 - 2008
+     &nbsp;
+  </td>
+  <td>
+     <b>IBM</b>  (Research Triangle Park, NC) 
+      <br><i>Software Engineer Intern</i> 
+     <p>Developed data validation tool for Mainframe for Networks on z/OS; responsible for developing design of tool in addition to developing the tool itself; written in C and Java. Developed new functionality for OMEGAMON XE. Maintained testing and automation tools for Linux on z/VM.</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2006 - 2008
+     &nbsp;
+  </td>
+  <td>
+     <b>Kids Gotta Learn</b>  (Raleigh NC) 
+      <br><i>Software Developer</i> 
+     <p>Developed custom software for company use. Wrote algorithms to automatically generate math practice problems and then create PDF worksheets of those problems. Wrote website using PHP and MySQL, and manage web services and email.</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2006 - 2007
+     &nbsp;
+  </td>
+  <td>
+     <b>Praxis Studios</b>  (Raleigh, NC) 
+      <br><i>Software Developer</i> 
+     <p>Worked with clients and designers to develop custom websites which had PHP front ends and retrieved content from a MySQL database. Upgraded and maintained in-house content management system. Provided first level technical support.</p>
+
+  </td>
+</tr>
+
+
+<tr> 
+  <th colspan="2">Open Source</th> 
+</tr> 
+
+
+<tr> 
+  <td>
+     
+     &nbsp;
+  </td>
+  <td>
+     <b>Github: http://www.github.com/poundifdef</b> 
+     
+     <p>Open source projects I manage and work on.</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     
+     &nbsp;
+  </td>
+  <td>
+     <b>Stackoverflow: http://stackoverflow.com/users/3788/poundifdef</b> 
+     
+     <p>My contributions to the Stackoverflow programmers' question-and-answer website.</p>
+
+  </td>
+</tr>
+
+
+<tr> 
+  <th colspan="2">Research and Projects</th> 
+</tr> 
+
+
+<tr> 
+  <td>
+     2011
+     &nbsp;
+  </td>
+  <td>
+     <b>Minutes Checker, Virgin Mobile</b> 
+     
+     <p>Created and maintain open-source Android application (using Java) to automatically check how many monthly minutes remain on my cell phone plan. The code is hosted on github, and several people have contributed patches. The app has more than 15,000 active users and a 5-star rating on the Android Market. </p>
+
+<p>Android Market page: https://market.android.com/details?id=com.jaygoel.virginminuteschecker 
+ Github project page: https://github.com/poundifdef/VirginMobileMinutesChecker</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2010
+     &nbsp;
+  </td>
+  <td>
+     <b>Autonomous Glockenspiel</b> 
+     
+     <p>For a class on wireless sensor networks, we programmed SunSPOT microcontrollers, which use an embedded JDK, to automatically play a physical musical instrument. </p>
+
+<p>Videos, pictures, and description: http://jaygoel.com/projects/glockenspiel/</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2010
+     &nbsp;
+  </td>
+  <td>
+     <b>Architecting TCP/IP for SILO Network Architecture</b> 
+     
+     <p>Wrote honors thesis on how one would architect TCP's functionality within a different networking framework. Implemented prototype of this in C++ on Linux, and created virtual machine images of the stack so that it could be easily deployed and tested. </p>
+
+<p>Final report: http://jaygoel.com/projects/net-silos/</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2009
+     &nbsp;
+  </td>
+  <td>
+     <b>Practical Graph Mining with R</b> 
+     
+     <p>(to appear) Wrote book chapter with peers on graph classification algorithms, along with R implementations. </p>
+
+<p>Source code: http://jaygoel.com/projects/graph-mining/</p>
+
+  </td>
+</tr>
+
+
+<tr> 
+  <th colspan="2">Awards and Honors</th> 
+</tr> 
+
+
+<tr> 
+  <td>
+     2011
+     &nbsp;
+  </td>
+  <td>
+     <b>Honorable Mention for NSF's Graduate Research Fellowship Program</b> 
+     
+     <p>The National Science Foundation accepts approximately 2,000 students to provide three years of funding for graduate work along with a living stipend every year. An additional 2,000 students receive an honorable mention and access to NSF grid computing resources.</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2010
+     &nbsp;
+  </td>
+  <td>
+     <b>Donald L. Bitzer Creativity Award - $500</b> 
+     
+     <p>North Carolina State University</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2010
+     &nbsp;
+  </td>
+  <td>
+     <b>Member of Upsilon Pi Epsilon</b> 
+     
+     
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2009
+     &nbsp;
+  </td>
+  <td>
+     <b>Research Experiences for Undergraduates - $6,400</b> 
+     
+     <p>National Science Foundation</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2009
+     &nbsp;
+  </td>
+  <td>
+     <b>Carol Miller Student Leadership Endowment - $1,000</b> 
+     
+     <p>North Carolina State University</p>
+
+  </td>
+</tr>
+
+
+<tr> 
+  <th colspan="2">Teaching and Service</th> 
+</tr> 
+
+
+<tr> 
+  <td>
+     2010
+     &nbsp;
+  </td>
+  <td>
+     <b>Community Volunteer</b> 
+     
+     <p>Fidelity Investments often provides opportunities for employees to volunteer in local schools. With other colleagues, we set up dozens of donated computers at a local middle school. I critiqued resumes and given career gudiance for high school students, in addition to meeting with students on our campus as part of a Teach for America initiative. I was recognized by the company, with 60 other associates, for my engagement.</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2009
+     &nbsp;
+  </td>
+  <td>
+     <b>Teaching Assistant</b> 
+     
+     <p>CSC 116: Introduction to Computing - Java</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2009 - 2010
+     &nbsp;
+  </td>
+  <td>
+     <b>Co-President</b> 
+     
+     <p>NCSU Association for Computing Machinery (ACM)</p>
+
+  </td>
+</tr>
+
+<tr> 
+  <td>
+     2008 - 2010
+     &nbsp;
+  </td>
+  <td>
+     <b>Columnist</b> 
+     
+     <p>Columnist for the "Technician", NCSU's daily student newspaper.</p>
+
+  </td>
+</tr>
+
+
+
+</table>
+
+   <div style="float: none; clear: both;">&nbsp;</div>
+
+</div>
+
+</body>
 </html>

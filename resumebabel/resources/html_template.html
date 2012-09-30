@@ -1,44 +1,255 @@
-<html xmlns:py="http://genshi.edgewall.org/">
-   <head>
-      <title>
-         {{hresume.contact.fname}} {{hresume.contact.lname}} - Resume
-      </title>
-   </head>
-   <body class="hresume">
-      <div class="vcard contact">
-         <h1 class="fn n">
-            <span class="given-name">{{hresume.contact.fname}}</span>
-            <span class="family-name">{{hresume.contact.lname}}</span>
-         </h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
 
-         <span class="email">{{hresume.contact.email}}</span> <br />
-         <span class="tel">{{hresume.contact.phone}}</span> <br /><br />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 
-         <span class="adr">
-            <span class="street-address">{{hresume.contact.street}}</span> <br />
-            <span class="locality">{{hresume.contact.city}}</span>,
-            <span class="region">{{hresume.contact.state}}</span>
-            <span class="postal-code">{{hresume.contact.zip}}</span> <br />
-         </span>
-      </div>
+<title>{{resume.contact.name}} - CV</title>
 
-      {% for school in resume.education %}
+<style type="text/css">
+body{
+    margin: 10;
+    padding: 0;
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 12pt;
+   width: 745px;
+   border-style: dotted;
+   border-width: 1px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-      <div class="vcalendar">
-        <div class="education vevent">
-          <div class="summary vcard">
-            <span class="location fn org">{{school.name}}</span>
-            <span class="description">{{school.degree}}</span>
-            <div class="adr">
-              <span class="locality">{{school.city}}</span>,
-              <abbr class="region" title="Alaska">{{school.state}}</abbr>
-            </div>
-          </div>
-          (<abbr class="dtstart" title="{{hresume.education[loop.index0].start_date}}">{{school.start_date}}</abbr> -
-           <abbr class="dtend" title="{{hresume.education[loop.index0].end_date}}">{{school.end_date}}</abbr>)
-        </div>
-      </div>
-      {% endfor %}
+h2{
+    top: 3px;
+    left: 4px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: normal;
+}
 
-   </body>
+h3{
+    display: block;
+    margin: 10px;
+    padding: 0;
+    font-size: 30px;
+    font-weight: normal;
+    color: #005522;
+}
+
+.header{
+    display: block;
+    height: 102px;
+    border-bottom: 3pt solid black;
+}
+
+.jg_icon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.horizontal_nav{
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 87px;
+    /*left: 4px;*/
+    font-size: 18px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.horizontal_nav a{
+    color: black;
+    text-decoration: none;
+    padding: 3px;
+    margin-left: 30px;
+}
+
+.horizontal_nav a:hover{
+    color: white;
+    background-color: #005522;
+}
+
+.body_container{
+    padding: 0;
+    padding-top: 1px;
+text-align: center;
+}
+
+.nav_column{
+    display: block;
+    float: left;
+    width: 15%;
+    margin-left: 2%;
+    padding: 0;
+    border: 0px solid black;
+    border-bottom: none;
+}
+
+.nav_column ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav_column a{
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav_column li a{
+    padding: 3px;
+    font-size: 12pt;
+    border-bottom: 0px solid black;
+    color: blue;
+   text-align: right;
+   text-decoration: none;
+}
+
+.nav_column li a:hover{
+    color: white;
+    background-color: #005522;
+}
+
+.content_column{
+   text-align: left;
+    display: block;
+    width: 660px;
+    margin-right: auto;
+    margin-left: 2%;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 3pt;
+    font-size: 80%;
+}
+
+/************************************************
+
+                     PHOTOS
+
+http://www.xaprb.com/blog/2006/10/29/automatic-image-captions-with-unobtrusive-javascript/
+
+************************************************/
+.left {
+   float: left;
+   margin-right: 5px;
+}
+.right {
+   float: right;
+   margin-left: 5px;
+}
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+div.figure {
+   border: 1px solid #AAA;
+   padding: 5px;
+   text-align: center;
+   font-size: small;
+   text-decoration: none;  
+}
+
+table.cv {
+   font-size: 10pt;
+}
+table.cv td {
+   vertical-align: top;
+}
+
+.side {
+   clear: none;
+}
+
+h1 {
+   font-size: 20pt;
+}
+
+</style>
+
+</head> 
+
+<body>
+
+<h3>Jay Goel</h3>
+
+
+<div class="body_container">
+{% if resume.contact.location %} {{resume.contact.location}} <br> {% endif %}
+{% if resume.contact.email %} {{resume.contact.email}} <br> {% endif %}
+{% if resume.contact.phone %} {{resume.contact.phone}} {% endif %}
+
+   <div class="content_column">
+
+      <table class="cv" cellpadding="3" cellspacing="3" b rde=ri0"> 
+
+{% if resume.objective %}
+<tr> 
+  <th colspan="2">Objective</th> 
+</tr> 
+<tr> 
+  <td colspan="2">
+     {{resume.objective}}
+  </td>
+{% endif %}
+
+
+{% if resume.education %}
+<tr> 
+  <th colspan="2">Education</th> 
+</tr> 
+{% for school in resume.education %}
+<tr> 
+  <td>
+     {% if school.date %}{{school.date}}{% endif %}
+     &nbsp;
+  </td>
+  <td> 
+    <b>{{ school.name }}</b>
+    {% if school.degree %} <br> {{school.degree}} {% endif %}
+    {% if school.description %} <p> {{school.description}} </p> {% endif %}
+  </td> 
+</tr> 
+{% endfor %}
+{% endif %}
+ 
+{% for experience_title, experience in resume.experiences.iteritems() %}
+<tr> 
+  <th colspan="2">{{ experience_title }}</th> 
+</tr> 
+
+{% for details in experience %}
+<tr> 
+  <td>
+     {% if details.date %}{{details.date}}{% endif %}
+     &nbsp;
+  </td>
+  <td>
+     <b>{{details.name}}</b> {% if details.location %} ({{ details.location }}) {% endif %}
+     {% if details.title %} <br><i>{{ details.title }}</i> {% endif %}
+     {{ details.description }}
+  </td>
+</tr>
+{% endfor %}
+{% endfor %}
+
+</table>
+
+   <div style="float: none; clear: both;">&nbsp;</div>
+
+</div>
+
+</body>
 </html>

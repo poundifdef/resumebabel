@@ -6,7 +6,7 @@
       "phone": "919-889-8223",
       "location": "New York, NY"
    },
-   "objective":"",
+   "objective":"contribute to society utilizing my skills",
    "education":
       [
       {
@@ -32,7 +32,7 @@
             "location": "Research Triangle Park, NC",
             "title": "Software Engineer",
             "date": "2010 - 2011",
-            "description": "- Added functionality to make invoicing software, written in C# and ASP.NET, compliant with new 401k Fee Dislcosure regulations. Implemented automated and deploy scripts using NAnt, previously a manual process. Implemented automated NUnit testing for our code base. One of two developers responsible for enhancements and maintainence. \n - On a separate project, helped convert a 3270-based mainframe application to a web interface, using JSP and Java for web development."
+            "description": "- Added functionality to make invoicing software, written in C# and ASP.NET, compliant with new 401k Fee Dislcosure regulations. Implemented automated and deploy scripts using NAnt, previously a manual process. Implemented automated NUnit testing for our code base. One of two developers responsible for enhancements and maintainence.\n- On a separate project, helped convert a 3270-based mainframe application to a web interface, using JSP and Java for web development."
          },
          {
             "name": "Altissimo Tech, LLC",
