@@ -21,6 +21,5 @@ New formats? For me on github!
 
 Dependencies:
 
-   * HTML, TXT templating: jinja (http://jinja.pocoo.org/)
+   * HTML, TXT templating: jinja2 (http://jinja.pocoo.org/)
    * Markdown: markdown2 (https://github.com/trentm/python-markdown2)
-   * phasing out: genshi (http://genshi.edgewall.org/)
