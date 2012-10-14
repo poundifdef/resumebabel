@@ -1,4 +1,5 @@
 import collections
+import inspect
 import json
 import os
 import sys
@@ -26,3 +27,10 @@ class ResumeBabel:
         for comp in parts[1:]:
             m = getattr(m, comp)
         return m
+
+    def get_supported_formats(self):
+        from pprint import pprint
+        import pkgutil
+        all_modules = [name.split('_')[0] for _, name, _ in
+            pkgutil.iter_modules(['converters']) if 'parent' not in name]
+        return all_modules
