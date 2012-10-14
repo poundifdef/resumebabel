@@ -31,6 +31,8 @@ class ResumeBabel:
 
     @staticmethod
     def get_supported_formats():
-        return [name.split('_')[0] for _, name, _ in
-                pkgutil.iter_modules(['converters'])
-                if 'parent' not in name]
+        return ['txt', 'html', 'json']
+        # TODO: fix this shit
+        #return [name.split('_')[0] for _, name, _ in
+        #        pkgutil.iter_modules(['converters'])
+        #        if 'parent' not in name]
