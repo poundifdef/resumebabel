@@ -6,6 +6,8 @@ from resumebabel.resumebabel import ResumeBabel
 
 
 if __name__ == '__main__':
+    print ResumeBabel.get_supported_formats()
+    sys.exit()
     input_json = sys.argv[1]
     output_file = sys.argv[2]
 

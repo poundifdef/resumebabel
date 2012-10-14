@@ -14,10 +14,11 @@ class HTMLConverter(ConverterParent):
         # TODO: markdown to html for more that description?
         self.preprocessed['resume'] = deepcopy(self.resume)
 
-        for experience_title, experiences in self.preprocessed['resume']['experiences'].iteritems():
-            for experience in experiences:
-                if experience.get('description'):
-                    experience['description'] = markdown2.markdown(experience['description'])
+        if 'experiences' in self.preprocessed['resume']:
+            for experience_title, experiences in self.preprocessed['resume']['experiences'].iteritems():
+                for experience in experiences:
+                    if experience.get('description'):
+                        experience['description'] = markdown2.markdown(experience['description'])
 
     def do_conversion(self):
         template_filename = self.get_resource('html_template.html')
