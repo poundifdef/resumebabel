@@ -1,17 +1,18 @@
 import collections
-import inspect
 import json
-import os
-import sys
+import pkgutil
+
 
 class ResumeBabel:
     def __init__(self, resume_json):
-        self.resume = json.loads(resume_json, object_pairs_hook=collections.OrderedDict)
+        self.resume = json.loads(resume_json,
+                                 object_pairs_hook=collections.OrderedDict)
 
     def export_resume(self, output_file, output_format):
         """Export raw data of converted resume"""
 
-        module_name = ('resumebabel.converters.' + output_format + '_converter.' +
+        module_name = ('resumebabel.converters.' + output_format +
+                       '_converter.' +
                        output_format.upper() + 'Converter')
 
         resume_converter_class = self._get_class(module_name)
@@ -28,9 +29,8 @@ class ResumeBabel:
             m = getattr(m, comp)
         return m
 
-    def get_supported_formats(self):
-        from pprint import pprint
-        import pkgutil
-        all_modules = [name.split('_')[0] for _, name, _ in
-            pkgutil.iter_modules(['converters']) if 'parent' not in name]
-        return all_modules
+    @staticmethod
+    def get_supported_formats():
+        return [name.split('_')[0] for _, name, _ in
+                pkgutil.iter_modules(['converters'])
+                if 'parent' not in name]
