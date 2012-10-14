@@ -4,7 +4,16 @@ import pkgutil
 
 
 class ResumeBabel:
-    def __init__(self, resume_json):
+    def __init__(self, resume_json=None):
+        if resume_json is None:
+            resume_json = '''
+            {
+               "contact": {},
+               "education": [],
+               "experiences": {}
+            }
+            '''
+
         self.resume = json.loads(resume_json,
                                  object_pairs_hook=collections.OrderedDict)
 
