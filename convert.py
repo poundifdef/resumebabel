@@ -17,5 +17,5 @@ if __name__ == '__main__':
     r = ResumeBabel(resume)
 
     out_fd = open(output_file, 'wb')
-    out_fd.write(r.export_resume(output_format))
+    r.export_resume(out_fd, output_format)
     out_fd.close()
